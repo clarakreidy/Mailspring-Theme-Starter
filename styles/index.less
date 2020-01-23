@@ -10,6 +10,7 @@ Note: This file needs to be named ui-variables.less so other
 stylesheets can call `@import "ui-variables";` and reference it.
 */
 @import "ui-variables";
+@import "material-icons";
 
 /*
 After changing variables to set a base for our theme, we can use
@@ -26,6 +27,13 @@ background color.)
 .sheet-toolbar {
   border-bottom: 1px solid @border-color-divider;
   box-shadow: none;
+}
+
+.thread-list .thread-icon.thread-icon-attachment,
+.draft-list .thread-icon.thread-icon-attachment {
+  background-image: url(../static/images/thread-list/icon-attachment-@2x.png);
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
@@ -50,3 +58,4 @@ img.content-light {
 .thread-list .list-item:not(.unread):not(.selected):not(.focused) {
   color: #aaa;
 }
+
